@@ -1,0 +1,21 @@
+{
+    "name": "iambadatnicknames/minesweeper",
+    "require": {
+        "wp-cli/php-cli-tools": "^0.12.5"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "iambadatnicknames\\minesweeper\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/minesweeper"
+    ],
+     "scripts": {
+        "phpcs": "./vendor/bin/phpcs --standard=PSR12 src bin",
+        "phpcs-fix": "./vendor/bin/phpcbf --standard=PSR12 src bin"
+    }
+}
