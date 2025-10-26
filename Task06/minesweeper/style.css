@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.controls, .history {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px 0;
+    width: 90%;
+    max-width: 500px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: inline-block;
+    width: 150px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#game-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#status-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    min-height: 25px;
+}
+
+#game-board {
+    display: grid;
+    border: 2px solid #999;
+    user-select: none; /* Запрещаем выделение текста на поле */
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #fff #808080 #808080 #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cell.revealed {
+    background-color: #e0e0e0;
+    border: 1px solid #b0b0b0;
+    cursor: default;
+}
+
+.cell.mine {
+    background-color: red;
+    font-size: 20px;
+}
+
+.cell.flag {
+    font-size: 20px;
+}
+
+.c1 { color: blue; }
+.c2 { color: green; }
+.c3 { color: red; }
+.c4 { color: navy; }
+.c5 { color: maroon; }
+.c6 { color: teal; }
+.c7 { color: black; }
+.c8 { color: grey; }
+
+#history-list li {
+    background-color: #e9ecef;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
