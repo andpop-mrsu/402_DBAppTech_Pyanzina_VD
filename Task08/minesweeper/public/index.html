@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сапер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Сапер</h1>
+        
+        <div class="nav">
+            <button onclick="showNewGameScreen()">Новая игра</button>
+            <button onclick="loadGamesList()">Список партий</button>
+        </div>
+
+        <div id="new-game-screen" class="screen">
+            <h2>Настройки</h2>
+            <div class="form-group">
+                <label>Имя игрока: <input type="text" id="player-name" value="Игрок"></label>
+            </div>
+            <div class="form-group">
+                <label>Размер поля (N x N): <input type="number" id="field-size" min="5" max="20" value="10"></label>
+            </div>
+            <div class="form-group">
+                <label>Количество мин: <input type="number" id="mines-count" min="1" max="50" value="10"></label>
+            </div>
+            <button onclick="startGame()">Начать</button>
+        </div>
+
+        <div id="list-screen" class="screen hidden">
+            <h2>История партий</h2>
+            <table id="games-table">
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Игрок</th>
+                        <th>Поле</th>
+                        <th>Мины</th>
+                        <th>Исход</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <h2 id="game-status">Игра идет</h2>
+            <div id="game-info"></div>
+            <div id="board"></div>
+            <div id="replay-controls" class="hidden">
+                <button onclick="replayNextStep()">Следующий ход</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
