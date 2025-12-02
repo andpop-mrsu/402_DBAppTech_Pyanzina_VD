@@ -1,8 +1,7 @@
-**/vendor/
-**.vscode/
-
-vendor/
+/vendor/
 composer.lock
 .DS_Store
 *.log
 *.db
+.vscode/
+vendor/
