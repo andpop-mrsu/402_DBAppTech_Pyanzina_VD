@@ -1,0 +1,205 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+h1 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.nav {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 5px rgba(74, 144, 226, 0.3);
+}
+
+button:hover {
+    background-color: #357abd;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+th:first-child { border-top-left-radius: 8px; }
+th:last-child { border-top-right-radius: 8px; }
+
+tr:last-child td { border-bottom: none; }
+tr:hover { background-color: #fbfbfb; }
+
+#game-info {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #7f8c8d;
+}
+
+#board {
+    display: grid;
+    gap: 4px; 
+    background-color: #bdc3c7;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 20px auto;
+    user-select: none;
+    width: fit-content;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 0 #bdc3c7; 
+}
+
+.cell:hover:not(.opened) {
+    background-color: #dfe6e9;
+    transform: translateY(-1px); 
+}
+
+.cell:active:not(.opened) {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+.cell.opened {
+    background-color: #fff;
+    cursor: default;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); 
+    transform: none;
+}
+
+.cell.mine {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    box-shadow: none;
+}
+
+.cell.mine[style*="orange"] {
+    background-color: #d35400 !important;
+}
+
+.cell.flag {
+    background-color: #ecf0f1;
+    color: #e74c3c;
+    font-size: 18px;
+}
+
+.cell.opened {
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 20px;
+}
+
+#game-status {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    height: 1.5em; 
+}
